@@ -20,9 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'index'])->name('Product.index');
 
 Auth::routes();
 
-Route::get('/home', function() {
+
+
+Route::get('/home', function () {
     return view('home');
 })->name('home')->middleware('auth');
