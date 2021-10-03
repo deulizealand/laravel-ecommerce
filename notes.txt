@@ -1,0 +1,10 @@
+{
+    "data": {
+        "GraphQL": [
+            "https://www.freecodecamp.org/news/build-graphql-server-with-laravel/",
+            "https://github.com/rebing/graphql-laravel#laravel-graphql"
+        ],
+
+    }
+
+}
