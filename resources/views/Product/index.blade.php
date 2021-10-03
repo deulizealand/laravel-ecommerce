@@ -1,10 +1,10 @@
 @extends('adminlte::page')
+<!-- @section('plugins.Datatables', true) -->
 @section('content')
 <div class="container-fluid">
     <br>
-
     <div class="card">
-        <div class="card-header">Master Produk</div>
+        <div class="card-header">Master Produk </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
@@ -55,7 +55,8 @@
                     </a>
                 </div>
             </div>
-            <table class="table table-bordered">
+            <product-list></product-list>
+            <!-- <table id="Product-table" class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Nama Produk</th>
@@ -66,8 +67,14 @@
                         <th>Status</th>
                     </tr>
                 </thead>
-            </table>
+            </table> -->
         </div>
     </div>
 </div>
 @endsection
+<!-- @section('js')
+<script>
+    $(document).ready(function() {
+    });
+</script>
+@stop -->
