@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use JeroenNoten\LaravelAdminLte\Components\Tool\Datatable;
+use DataTables;
 
 class ProductController extends Controller
 {
@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         if ($request->isJson()) {
             $product = Product::all();
-            return Datatable::of($product)
+            return DataTables::of($product)
                 ->make(true);
         }
 
@@ -27,7 +27,7 @@ class ProductController extends Controller
     public function apiProducts()
     {
         $product = Product::all();
-        return Datatable::of($product)
+        return DataTables::of($product)
             ->make(true);
     }
 

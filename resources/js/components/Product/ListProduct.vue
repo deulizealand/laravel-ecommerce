@@ -13,13 +13,9 @@ export default {
     data() {
         return {
             action: "http://localhost:8000/api/products",
-            columns: ["id", "name", "age"],
+            columns: ["id", "product_name", "product_price", "product_status","product_stock"],
             tableData: [
-                { id: 1, name: "John", age: "20" },
-                { id: 2, name: "Jane", age: "24" },
-                { id: 3, name: "Susan", age: "16" },
-                { id: 4, name: "Chris", age: "55" },
-                { id: 5, name: "Dan", age: "40" }
+
             ],
             options: {
                 // see the options API
@@ -35,6 +31,8 @@ export default {
             });
             const resData = await res.data;
             console.log(resData);
+
+            this.tableData = resData.data
         }
     },
     created() {

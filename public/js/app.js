@@ -2250,28 +2250,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       action: "http://localhost:8000/api/products",
-      columns: ["id", "name", "age"],
-      tableData: [{
-        id: 1,
-        name: "John",
-        age: "20"
-      }, {
-        id: 2,
-        name: "Jane",
-        age: "24"
-      }, {
-        id: 3,
-        name: "Susan",
-        age: "16"
-      }, {
-        id: 4,
-        name: "Chris",
-        age: "55"
-      }, {
-        id: 5,
-        name: "Dan",
-        age: "40"
-      }],
+      columns: ["id", "product_name", "product_price", "product_status", "product_stock"],
+      tableData: [],
       options: {// see the options API
       }
     };
@@ -2301,8 +2281,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 5:
                 resData = _context.sent;
                 console.log(resData);
+                _this.tableData = resData.data;
 
-              case 7:
+              case 8:
               case "end":
                 return _context.stop();
             }
