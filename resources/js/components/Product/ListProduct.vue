@@ -12,7 +12,7 @@
 export default {
     data() {
         return {
-            action: "htpp://localhost:8000/product",
+            action: "http://localhost:8000/api/products",
             columns: ["id", "name", "age"],
             tableData: [
                 { id: 1, name: "John", age: "20" },
@@ -28,7 +28,11 @@ export default {
     },
     methods: {
         async getProduct() {
-            const res = await axios.get(this.action);
+            const res = await axios.get(this.action, {
+                headers: {
+                    Accept: "application/json"
+                }
+            });
             const resData = await res.data;
             console.log(resData);
         }

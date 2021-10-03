@@ -7,7 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
 import Vue from 'vue';
 /**
  * The following block of code may be used to automatically register your
@@ -24,7 +23,6 @@ Vue.use(ServerTable, {}, false, 'bootstrap4')
 Vue.use(ClientTable, {}, false, 'bootstrap4')
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('product-list', require('./components/Product/Index.vue').default);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

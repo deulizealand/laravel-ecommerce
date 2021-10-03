@@ -24,6 +24,13 @@ class ProductController extends Controller
         return view('Product.index');
     }
 
+    public function apiProducts()
+    {
+        $product = Product::all();
+        return Datatable::of($product)
+            ->make(true);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -2249,7 +2249,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      action: "htpp://localhost:8000/product",
+      action: "http://localhost:8000/api/products",
       columns: ["id", "name", "age"],
       tableData: [{
         id: 1,
@@ -2287,7 +2287,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.get(_this.action);
+                return axios.get(_this.action, {
+                  headers: {
+                    Accept: "application/json"
+                  }
+                });
 
               case 2:
                 res = _context.sent;
@@ -2387,8 +2391,8 @@ try {
  */
 
 
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); // window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
