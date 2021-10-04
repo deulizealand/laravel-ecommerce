@@ -2246,6 +2246,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -40779,6 +40780,8 @@ var render = function() {
     "div",
     { staticClass: "container-fluid" },
     [
+      _c("h3", [_vm._v("List Products ")]),
+      _vm._v(" "),
       _c("v-client-table", {
         attrs: {
           data: _vm.tableData,
