@@ -10,4 +10,6 @@ class Product extends Model
 {
     use Uuids;
     use HasFactory;
+
+    public $guarded = [];
 }
