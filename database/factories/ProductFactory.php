@@ -26,6 +26,7 @@ class ProductFactory extends Factory
             'product_price' => $this->faker->randomDigit,
             'product_stock' => $this->faker->randomDigit,
             'product_status' => $this->faker->randomDigit,
+            'image_url' => $this->faker->image('public/storage/image',400,300),
         ];
     }
 }
